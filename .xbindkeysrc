@@ -1,0 +1,19 @@
+# Audio controls using pulseaudio
+"pactl set-sink-mute 0 toggle"
+  XF86AudioMute
+"sh -c pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
+  XF86AudioLowerVolume
+"sh -c pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
+  XF86AudioRaiseVolume
+
+# Brightness controls
+"brightnessctl set 5%-"
+  XF86MonBrightnessDown
+"brightnessctl set +5%"
+  XF86MonBrightnessUp
+
+# Screenshot using xfce4-screenshooter
+"xfce4-screenshooter --fullscreen"
+  Scroll_Lock
+"xfce4-screenshooter -w"
+  Print
